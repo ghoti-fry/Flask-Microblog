@@ -1,0 +1,30 @@
+SQLite format 3@  
+
+.?�
+��
+�k
+�
+�S/qindexix_post_timestamppostCREATE INDEX ix_post_timestamp ON post (timestamp)�>�_tablepostpostCREATE TABLE post (
+	id INTEGER NOT NULL, 
+	body VARCHAR(140), 
+	timestamp DATETIME, 
+	user_id INTEGER, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(user_id) REFERENCES user (id)
+)W-{indexix_user_usernameuserCREATE UNIQUE INDEX ix_user_username ON user (username)N'oindexix_user_emailuserCREATE UNIQUE INDEX ix_user_email ON user (email)��!tableuseruserCREATE TABLE user (
+	id INTEGER NOT NULL, 
+	username VARCHAR(64), 
+	email VARCHAR(120), 
+	password_hash VARCHAR(128), 
+	PRIMARY KEY (id)
+)�)++�	tablealembic_versionalembic_versionCREATE TABLE alembic_version (
+	version_num VARCHAR(32) NOT NULL, 
+	CONSTRAINT alembic_version_pkc PRIMARY KEY (version_num)
+)=Q+indexsqlite_autoindex_alembic_version_1alembic_version
+��%1430b5e84af9
+��%	1430b5e84af9
+K��L�Kz/�Idaviddavid@example.compbkdf2:sha256:150000$pfTEe81S$66874c3c33625235fed7c0a9de71392170436a445f9dcd740cc78c0658c858c8�!5�Ijshufordjrjshufordjr@gmail.compbkdf2:sha256:150000$vE9MI18L$89ba51c72358883ad14b040ce4581346fe142fb4cdeafcac31d480712053977bz/�Ijacksjacks@example.compbkdf2:sha256:150000$uJtuDQ17$3b6c023fe6c4bdd5b65d9176b1ef0e07b4c080734ec1d96542dbfbcb2d3d21af/susansusan@example.com-johnjohn@example.com
+������/david@example.com5jshufordjr@gmail.com/jacks@example.com/susan@example.com-	john@example.com
+������	david!jshufordjr	jacks	susan	john
+
+
